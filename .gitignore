@@ -1,0 +1,10 @@
+# dependencies
+node_modules/
+
+# environment variables
+.env.php
+.env.local.php
+.env.production.php
+
+#rules
+/RULES.md

@@ -1,0 +1,16 @@
+{
+ "name": "Appdad",
+ "short_name": "Appdad",
+ "description": "Software para automatizar la generación de constancias académicas y proporcionar una plataforma integral para la gestión de eventos, talleres, charlas y la administración académica.",
+ "icons": [
+  {
+   "src": "./public/img/icon.webp",
+   "sizes": "128x128",
+   "type": "image/webp"
+  }
+ ],
+ "display": "standalone",
+ "installable": true,
+ "background_color": "#f7f7f7",
+ "theme_color": "#FFF"
+}

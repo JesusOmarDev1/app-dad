@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://appdad.cucea.udg.mx/sitemap-index.xml
