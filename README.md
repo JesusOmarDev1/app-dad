@@ -32,6 +32,12 @@ Para actualizar cualquier dependencia:
   pnpm update
 ```
 
+```tailwindcss
+  npx tailwindcss -i ./src/resources/css/input.css -o ./src/resources/css/output.css --watch
+```
+
+
+
 Una vez que hayas clonado el repositorio con `SSH` o `HTTPS` tendras que iniciar tu XAMPP y activar el servicio de Apache.
 
 **NOTA:** Ten en cuenta que este software utiliza PHP 8.0.30 y XAMPP 3.3.0
