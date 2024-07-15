@@ -22,4 +22,4 @@ Los mantenedores son responsables de garantizar el cumplimiento de este Código 
 
 ## Retroalimentacion ✨
 
-Si tienes algún comentario, comunicate al privado por github o con nosotros en <appdad@gmail.com>
+Si tienes algún comentario, comunicate al privado por github o con nosotros en <garcia.de@alumnos.udg.mx>

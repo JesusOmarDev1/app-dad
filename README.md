@@ -4,7 +4,9 @@
 
 ## Descripcion General 📌
 
-El software es abierto y tiene como objetivo automatizar la generación de constancias académicas y proporcionar una plataforma integral para la gestión de eventos, talleres, charlas y la administración académica.
+El software es abierto para contribuidores pero cerrado para uso y tiene como objetivo automatizar la generación de constancias académicas y proporcionar una plataforma integral para la gestión de eventos, talleres, charlas y la administración académica.
+
+[![Issues][issues-badge]][issues-url]
 
 ## Instalacion 📦
 
@@ -12,12 +14,6 @@ El software es abierto y tiene como objetivo automatizar la generación de const
 
 ```bash
   git clone https://github.com/JesusOmarDev1/app-dad.git
-```
-
-`SSH`
-
-```bash
-  git clone git@github.com:JesusOmarDev1/app-dad.git
 ```
 
 Para empezar a usar el proyecto:
@@ -30,6 +26,12 @@ Para actualizar cualquier dependencia:
 
 ```bash
   pnpm update
+```
+
+Para cambiar los estilos de tailwind:
+
+```bash
+  npx tailwindcss -i ./src/resources/css/input.css -o ./src/resources/css/output.css --watch
 ```
 
 Una vez que hayas clonado el repositorio con `SSH` o `HTTPS` tendras que iniciar tu XAMPP y activar el servicio de Apache.
@@ -100,4 +102,4 @@ Estaremos haciendo testing constantemente para que nuestro sistema siempre funci
 
 ## Retroalimentacion ✨
 
-Si tienes algún comentario, comunicate al privado por github o con nosotros en <appdad@gmail.com>
+Si tienes algún comentario, comunicate al privado por github o con nosotros en <garcia.de@alumnos.udg.mx>

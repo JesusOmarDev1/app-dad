@@ -36,4 +36,4 @@
 
 ## Retroalimentacion ✨
 
-Si tienes algún comentario, comunicate con nosotros en <appdad@gmail.com>
+Si tienes algún comentario, comunicate con nosotros en <garcia.de@alumnos.udg.mx>
