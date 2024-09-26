@@ -2,9 +2,7 @@
 
 // app/config/Database.php
 
-class Database
-{
-   public function getConnection()
+   function getConnection()
    {
       try {
          // Incluir el archivo de configuración para obtener las credenciales de la base de datos
@@ -23,4 +21,4 @@ class Database
          return null;
       }
    }
-}
+

@@ -13,18 +13,6 @@
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://appdad.cucea.udg.mx/404</loc>
-      <lastmod>2024-06-08</lastmod>
-      <changefreq>yearly</changefreq>
-      <priority>0.5</priority>
-   </url>
-   <url>
-      <loc>https://appdad.cucea.udg.mx/500</loc>
-      <lastmod>2024-06-08</lastmod>
-      <changefreq>yearly</changefreq>
-      <priority>0.5</priority>
-   </url>
-   <url>
       <loc>https://appdad.cucea.udg.mx/mantenimiento</loc>
       <lastmod>2024-06-08</lastmod>
       <changefreq>yearly</changefreq>
@@ -32,4 +20,4 @@
    </url>
 </urlset>
 
-<!-- Sitemap made by appdad -->
+<!-- Sitemap made by appdad ❤️ -->

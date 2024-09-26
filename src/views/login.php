@@ -13,7 +13,7 @@
    <link rel="manifest" href="./manifest.json" />
    <!-- ========== DEFAULT ========== -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="shortcut icon" href="../../public/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../../public/img/icon.svg" type="image/x-icon">
    <!-- ========== RESOURCES ========== -->
    <link rel="stylesheet" href="../resources/css/output.css">
    <link rel="stylesheet" href="../vendor/sweetalert2/sweetalert2.min.css">
@@ -22,35 +22,31 @@
 
 </head>
 
-<body class="flex flex-col items-center justify-center w-full h-auto p-4 bg-no-repeat bg-gradient-to-tr from-secondary-500 via-purple-600 to-primary-500 min-h-dvh">
+<body class="[&::-webkit-scrollbar]:w-0 [&::-webkit-scrollbar-thumb]:rounded-full [--has-autofocus:false] [&::-webkit-scrollbar-track]:bg-zinc-50 [&::-webkit-scrollbar-thumb]:bg-zinc-100 flex flex-col items-center justify-center w-full h-auto bg-no-repeat bg-gradient-to-tr from-purple-500 via-purple-500 to-purple-500 min-h-dvh">
    <!-- ========== MAIN CONTENT ========== -->
-   <main class="flex flex-col items-center justify-center gap-1">
-      <section class="flex flex-col gap-3 p-6 leading-6 bg-white rounded-lg shadow-lg border-terciary-300 backdrop-blur-2xl sm:p-7 w-80 md:w-96 border-1 text-terciary-950">
+   <main class="flex flex-col items-center justify-center gap-1 sm:flex-row">
+      
+      <section class="flex flex-col max-w-sm gap-2 p-8 leading-6 rounded-lg shadow-lg border-zinc-300 backdrop-blur-3xl border-1 text-zinc-950">
          <!-- ========== HEADER FORM ========== -->
          <div class="flex items-center justify-center w-full">
-            <img class="object-fill w-48 h-32 aspect-auto" src="../../public/img/logo.webp" alt="Logo | Appdad" title="Logo | Appdad" aria-label="Logo | Appdad" loading="lazy" decoding="async">
+            <img class="w-48 h-32 aspect-auto" src="../../public/img/logo.svg" alt="Logo | Appdad" title="Logo | Appdad" aria-label="Logo | Appdad" loading="lazy" decoding="async">
          </div>
-         <!-- ========== END ========== -->
-         <!-- ========== FORM ========== -->
-         <form id="LoginForm" class="flex flex-col w-full gap-4 text-sm" action="../tests/LoginTest.php" method="POST" role="form" title="" aria-label="">
+         <!-- ========== LOGIN FORM ========== -->
+         <form id="LoginForm" class="flex flex-col w-full gap-4 text-sm" action="" method="POST" role="form" title="" aria-label="">
             <!-- ========== USERNAME INPUT ========== -->
-            <div class="max-w-sm">
-               <div>
-                  <label for="username" class="block mb-2 text-sm font-semibold">Usuario</label>
-                  <div class="relative">
-                     <input type="text" id="username" name="username" class="block w-full px-4 py-3 text-sm border rounded-lg border-terciary-200 focus:border-secondary-500 disabled:opacity-50 disabled:pointer-events-none" aria-describedby="username-error-helper" placeholder="Ingresa tu usuario...">
-                  </div>
-                  <p class="mt-2 text-xs font-semibold text-terciary-400">Nunca compartiremos tu informacion.</p>
+            <div>
+               <label for="username" class="block mb-2 text-sm font-semibold">Usuario</label>
+               <div class="relative">
+                  <input type="text" id="username" name="username" class="block w-full px-4 py-3 text-sm border rounded-lg border-zinc-200 focus:border-blue-500 disabled:opacity-50 disabled:pointer-events-none" aria-describedby="username-error-helper" placeholder="Ingresa tu usuario...">
                </div>
+               <p class="mt-2 text-xs font-semibold text-zinc-400">Nunca compartiremos tu informacion.</p>
             </div>
-            <!-- ========== END ========== -->
             <!-- ========== PASSWORD INPUT ========== -->
-            <div class="max-w-sm">
-               <div class="max-w-sm">
+            <div>
                   <label for="password" class="block mb-2 text-sm font-semibold">Contraseña</label>
                   <div class="flex">
                      <div class="relative flex-1">
-                        <input type="password" name="password" maxlength="15" minlength="8" id="password" class="block w-full px-4 py-3 text-sm border rounded-md border-terciary-200 focus:border-secondary-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Ingresa tu contraseña...">
+                        <input type="password" name="password" maxlength="15" minlength="8" id="password" class="block w-full px-4 py-3 text-sm border rounded-md border-zinc-200 focus:border-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Ingresa tu contraseña...">
                         <!-- ========== PASSWORD POPOVER ========== -->
                         <div id="hs-strong-password-popover" class="absolute z-10 hidden w-full p-4 bg-white rounded-lg shadow-md">
                            <div id="hs-strong-password-in-popover" data-hs-strong-password='{
@@ -65,7 +61,7 @@
                            </div>
                            <div class="my-2">
                               <div>
-                                 <span class="text-sm text-terciary-950">Nivel de Seguridad:</span>
+                                 <span class="text-sm text-zinc-950">Nivel de Seguridad:</span>
                                  <span data-hs-strong-password-hints-weakness-text='["Vacio", "Debil", "Medio", "Fuerte", "Muy Fuerte", "Excelente"]' class="text-sm font-semibold text-gray-800 dark:text-neutral-200"></span>
                               </div>
 
@@ -145,26 +141,23 @@
                         <!-- ========== END PASSWORD POPOVER ========== -->
                      </div>
                   </div>
-               </div>
             </div>
-            <!-- ========== END ========== -->
-            <button id="btn-login" class="flex items-center justify-center w-full gap-2 py-3 font-bold text-center text-white transition-colors border rounded-lg bg-secondary-600 hover:bg-secondary-800 hover:cursor-pointer text-md disabled:opacity-50 disabled:cursor-not-allowed" type="submit">
+            <button id="btn-login" class="flex items-center justify-center w-full gap-2 py-2 font-medium text-center text-white transition-colors bg-blue-600 border rounded-lg hover:bg-blue-800 hover:cursor-pointer text-md disabled:opacity-50 disabled:cursor-not-allowed" type="submit">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
                </svg>
                Iniciar Sesion con Usuario</button>
          </form>
-         <!-- ========== END FORM ========== -->
          <!-- ========== OR ========== -->
          <div class="flex items-center justify-center gap-2 font-medium text-md">
-            <div class="flex-1 h-[1px] bg-terciary-100"></div>
+            <div class="flex-1 h-[1px] bg-zinc-100"></div>
             <span>o</span>
-            <div class="flex-1 h-[1px] bg-terciary-100"></div>
+            <div class="flex-1 h-[1px] bg-zinc-100"></div>
          </div>
          <!-- ========== END ========== -->
          <!-- ========== GOOGLE FORM ========== -->
          <form class="flex w-full text-sm" action="" enctype="" method="" role="" title="" aria-label="">
-            <button disabled class="flex items-center justify-center w-full gap-2 py-3 font-medium text-white bg-black border rounded-lg shadow-sm disabled:opacity-50 disabled:cursor-not-allowed" type="submit">
+            <button disabled class="flex items-center justify-center w-full gap-2 py-2 font-medium text-white border rounded-lg shadow-sm bg-zinc-950 disabled:opacity-50 disabled:cursor-not-allowed" type="submit">
                <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48">
                   <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917" />
                   <path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691" />
@@ -174,14 +167,9 @@
          </form>
          <!-- ========== END GOOGLE FORM ========== -->
          <!-- ========== LEGAL ========== -->
-         <p class="w-full text-xs text-center">Al continuar, acepta los <a class="font-bold underline hover:text-secondary-600" href="" title="" aria-label="" target="_blank" rel="noopener noreferrer">Términos de servicio</a> y la <a class="font-bold underline hover:text-secondary-600" href="" title="" aria-label="" target="_blank" rel="noopener noreferrer">Política de privacidad</a> de appdad, recibir correos electrónicos periódicos con actualizaciones y nuestra <a class="font-bold underline hover:text-secondary-600" href="" title="" aria-label="" target="_blank" rel="noopener noreferrer">Configuracion de Notificaciones</a> predeterminada.</p>
+         <p class="w-full text-xs text-center">Al continuar, acepta los <a class="font-bold underline hover:text-blue-600" href="" title="" aria-label="" target="_blank" rel="noopener noreferrer">Términos de servicio</a> y la <a class="font-bold underline hover:text-blue-600" href="" title="" aria-label="" target="_blank" rel="noopener noreferrer">Política de privacidad</a> de appdad, recibir correos electrónicos periódicos con actualizaciones y nuestra <a class="font-bold underline hover:text-blue-600" href="" title="" aria-label="" target="_blank" rel="noopener noreferrer">Configuracion de Notificaciones</a> predeterminada.</p>
          <!-- ========== END ========== -->
       </section>
-      <!-- ========== VERSION ========== -->
-      <footer>
-         <p class="font-semibold tracking-wider text-white text-md">Version 0.0.2 Beta</p>
-      </footer>
-      <!-- ========== END ========== -->
    </main>
    <!-- ========== END MAIN CONTENT ========== -->
    <!-- ========== FOOTER ========== -->
@@ -189,7 +177,11 @@
 
    </footer>
    <!-- ========== END FOOTER ========== -->
-   <script src="../vendor/preline/preline.js"></script>
+   <script src="https://unpkg.com/lucide@latest"></script>
+   <script>
+     lucide.createIcons();
+   </script>
+   <script src="../../node_modules/preline/preline.js"></script>
    <script src="../vendor/sweetalert2/sweetalert2.min.js"></script>
 
    <script>

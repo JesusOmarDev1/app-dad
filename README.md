@@ -1,6 +1,6 @@
 # PWA Appdad 🚀
 
-![Appdad - Logo](/public/img/logo.webp)
+![Appdad - Logo](/public/img/logo.svg)
 
 ## Descripcion General 📌
 
