@@ -1,33 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import { Button } from './components/ui/button'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import AdminDashboard from "./pages/admin/admin-dashboard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className='h-screen flex flex-col justify-center items-center gap-4 bg-background text-foreground'>
-      <div className='flex gap-2'>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="h-32" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="h-32 animate-[spin_5s_linear_infinite]" alt="React logo" />
-        </a>
-      </div>
-      <h1 className='text-4xl font-semibold'>Vite + React</h1>
-      <Button className='' onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </Button>
-      <p>
-        Edit <code>src/App.tsx</code> and save to test HMR
-      </p>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <main>
+      <BrowserRouter>
+        <Routes key={"app-dad-routes"}>
+          {/* Default Routing */}
+          <Route key={"app-dad-home"} path="/" element={<Home />} />
+          {/* Authtentication Routing */}
+          <Route
+            key={"app-dad-signin"}
+            path="/auth/signin"
+            element={<h1>Sign In</h1>}
+          />
+          <Route
+            key={"app-dad-signup"}
+            path="/auth/signup"
+            element={<h1>Sign Up</h1>}
+          />
+          <Route
+            key={"app-dad-forgot-password"}
+            path="/auth/forgot-password"
+            element={<h1>Forgot Password</h1>}
+          />
+          {/* Authenticated Routing */}
+          <Route
+            key={"app-dad-admin-dashboard"}
+            path="/admin/dashboard"
+            element={<AdminDashboard />}
+          />
+          {/* 404 Routing */}
+          <Route key={"app-dad-404"} path="*" element={<h1>404</h1>} />
+          {/*  */}
+        </Routes>
+      </BrowserRouter>
+    </main>
+  );
 }
 
-export default App
+export default App;
