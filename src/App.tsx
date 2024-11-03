@@ -33,7 +33,6 @@ function App() {
           />
           {/* 404 Routing */}
           <Route key={"app-dad-404"} path="*" element={<h1>404</h1>} />
-          {/*  */}
         </Routes>
       </BrowserRouter>
     </main>
